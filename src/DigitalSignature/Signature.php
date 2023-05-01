@@ -6,8 +6,8 @@ use Mapper\ModelMapper;
 
 class Signature {
 
-    private SignatureConfig $signatureConfig;
-    private SignatureService $signatureService;
+    private $signatureConfig;
+    private $signatureService;
 
     public function __construct($jsonConfig) {
         $this->loadSignatureConfig($jsonConfig);
