@@ -48,7 +48,13 @@ class Signature {
         
         $this->signatureConfig->signingKeyCipher = "sha-256";
         if(empty($this->signatureParams)){
-            $this->signatureParams = [];
+            $this->signatureParams = [
+              "content-digest",
+              "x-ebay-signature-key",
+              "@method",
+              "@path",
+               "@authority"    
+            ];
         }
     }
 }
