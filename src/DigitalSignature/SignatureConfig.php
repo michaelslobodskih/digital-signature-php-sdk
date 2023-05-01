@@ -8,7 +8,7 @@ class SignatureConfig
      * @required
      * @var string
      */
-    public $digestAlgorithm;
+    public $signingKeyCipher;
 
     /**
      * @var string
