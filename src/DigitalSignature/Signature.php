@@ -47,8 +47,8 @@ class Signature {
         $mapper->map($jsonConfig, $this->signatureConfig);
         
         $this->signatureConfig->signingKeyCipher = "sha-256";
-        if(empty($this->signatureParams)){
-            $this->signatureParams = [
+        if(empty($this->signatureConfig->signatureParams)){
+            $this->signatureConfig->signatureParams = [
               "content-digest",
               "x-ebay-signature-key",
               "@method",
