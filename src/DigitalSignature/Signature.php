@@ -44,6 +44,6 @@ class Signature {
     private function loadSignatureConfig($jsonConfig): void {
         $mapper = new ModelMapper();
         $this->signatureConfig = new SignatureConfig();
-        $mapper->map($jsonDecodedObj, $this->signatureConfig);
+        $mapper->map($jsonConfig, $this->signatureConfig);
     }
 }
