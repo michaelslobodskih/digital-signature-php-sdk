@@ -47,6 +47,9 @@ class Signature {
         $mapper->map($jsonConfig, $this->signatureConfig);
         
         $this->signatureConfig->signingKeyCipher = "sha-256";
+        
+        $this->signatureConfig->privateKeyStr = $jsonConfig->privateKey;
+            
         if(empty($this->signatureConfig->signatureParams)){
             $this->signatureConfig->signatureParams = [
               "content-digest",
