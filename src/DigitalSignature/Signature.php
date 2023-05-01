@@ -45,5 +45,7 @@ class Signature {
         $mapper = new ModelMapper();
         $this->signatureConfig = new SignatureConfig();
         $mapper->map($jsonConfig, $this->signatureConfig);
+        
+        $this->signatureConfig->signingKeyCipher = "sha-256"
     }
 }
