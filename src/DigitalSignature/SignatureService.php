@@ -14,7 +14,7 @@ class SignatureService {
      * @return string content digest
      */
     public function generateContentDigest(string $body, SignatureConfig $signatureConfig): string {
-        $cipher = trim(strtolower($signatureConfig->digestAlgorithm));
+        $cipher = trim(strtolower($signatureConfig->signingKeyCipher));
 
         return sprintf('%s=:%s:',
             $cipher,
